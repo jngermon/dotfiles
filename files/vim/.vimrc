@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'msanders/snipmate.vim'
+Plugin 'terryma/vim-multiple-cursors'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'auto_mkdir'
 " Git plugin not hosted on GitHub
