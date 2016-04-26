@@ -4,12 +4,24 @@ if [ ! $(which git) ]; then
     echo "Git is not installed"
 else
 	GITCONFIG="$(pwd)/files/git/.gitconfig"
+    GITCONFIG_DEST="$HOME/.gitconfig"
 
-	if [ ! -f ~/.gitconfig ] || [ ! -h ~/.gitconfig ]; then
-	    echo "Create symbolik link form ~/.gitconfig to $GITCONFIG"
+	if [ ! -f $GITCONFIG_DEST ] || [ ! -h $GITCONFIG_DEST ]; then
+	    echo "Create symbolik link form $GITCONFIG_DEST to $GITCONFIG"
 
-	    ln --symbolic --force $GITCONFIG ~/.gitconfig
+	    ln --symbolic --force $GITCONFIG $GITCONFIG_DEST
 	else
-		echo ~/.gitconfig already exists and is a symbolic link
+		echo $GITCONFIG_DEST already exists and is a symbolic link
+	fi
+
+	GITIGNOREGLOBAL="$(pwd)/files/git/.gitignore_global"
+	GITIGNOREGLOBAL_DEST="$HOME/.gitignore_global"
+
+	if [ ! -f $GITIGNOREGLOBAL_DEST ] || [ ! -h $GITIGNOREGLOBAL_DEST ]; then
+	    echo "Create symbolik link form $GITIGNOREGLOBAL_DEST to $GITIGNOREGLOBAL"
+
+	    ln --symbolic --force $GITIGNOREGLOBAL $GITIGNOREGLOBAL_DEST
+	else
+		echo $GITIGNOREGLOBAL_DEST already exists and is a symbolic link
 	fi
 fi
