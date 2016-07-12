@@ -86,3 +86,5 @@ source $ZSH/oh-my-zsh.sh
 alias lla="ll -a"
 alias dockershell="webdev-toolbox docker-shell"
 alias dockip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+
+function ssh_tmux() { ssh -t "$1" tmux a || ssh -t "$1" tmux; }
