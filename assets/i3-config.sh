@@ -10,6 +10,11 @@ else
 
     createSymlink $I3CONFIG $I3CONFIG_DEST
 
+    I3STATUS="$(pwd)/files/i3/status.conf"
+    I3STATUS_DEST="$HOME/.config/i3/status.conf"
+
+    createSymlink $I3STATUS $I3STATUS_DEST
+
     if [ $? = 0 ]; then
         i3 reload
     fi
