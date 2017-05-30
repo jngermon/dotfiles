@@ -7,10 +7,10 @@ if [ ! $(which subl) ]; then
 else
 
     SUBLIME="$(pwd)/files/sublime-text-3"
-    SUBLIME_CONFIG="$SUBLIME/config/"
+    SUBLIME_CONFIG="$SUBLIME/config"
     SUBLIME_CONFIG_DEST="$HOME/.config/sublime-text-3/Packages/User"
 
-    createSymlink $SUBLIME_CONFIG $SUBLIME_CONFIG
+    createSymlink $SUBLIME_CONFIG $SUBLIME_CONFIG_DEST
 
     if [ $(which composer) ]; then
         composer --working-dir=$(pwd)/files/sublime-text-3 -- install

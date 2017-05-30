@@ -16,8 +16,12 @@ function createSymlink {
     if [ ! -e $target ] || [ ! -h $target ]; then
         echo "Create symbolik link form $target to $source"
 
-        if [ -e $target ]; then
+        if [ -f $target ]; then
             mv $target $target.bkp
+        fi
+
+        if [ -d $target ]; then
+            mv $target $target/../$(basename $target).bkp
         fi
 
         ln --symbolic --force $source $target
