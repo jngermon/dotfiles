@@ -28,3 +28,18 @@ function createSymlink {
         return 1
     fi
 }
+
+function mkdirIfNotExists {
+    local dir=$1
+
+    if [ ! $dir ]; then
+        echo "Dir is required"
+        return 1
+    fi
+
+    if [ ! -e $dir ]; then
+        echo "Create $dir"
+        mkdir $dir
+        return 0
+    fi
+}
