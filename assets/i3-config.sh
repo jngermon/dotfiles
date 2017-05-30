@@ -14,5 +14,9 @@ else
         i3 reload
     fi
 
+    I3EXIT="$(pwd)/files/i3/i3exit"
+    I3EXIT_DEST="$HOME/bin/i3exit"
+    createSymlink $I3EXIT $I3EXIT_DEST
+
     exit 0
 fi
