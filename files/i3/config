@@ -184,3 +184,6 @@ bindsym XF86AudioMute exec "amixer -D pulse -q sset Master,0 toggle"
 # Tools
 bindsym XF86Calculator exec "gnome-calculator"
 
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
