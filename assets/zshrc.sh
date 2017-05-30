@@ -1,17 +1,18 @@
 #!/bin/bash
 
+. "$(dirname $0)/common.sh"
+
 if [ ! $(which zsh) ]; then
     echo "Zsh is not installed"
 else
-	ZSHRC="$(pwd)/files/zsh/.zshrc"
+    ZSHRC="$(pwd)/files/zsh/.zshrc"
+    ZSHRC_DEST="$HOME/.zshrc"
 
-	if [ ! -f ~/.zshrc ] || [ ! -h ~/.zshrc ]; then
-		echo "Create symbolik link form ~/.zshrc to $ZSHRC"
+    createSymlink $ZSHRC $ZSHRC_DEST
 
-	    ln --symbolic --force $ZSHRC ~/.zshrc
+    if [ $? = 0 ]; then
+        echo "You have to restart your console"
+    fi
 
-	    echo "You have to restart your console"
-	else
-		echo ~/.zshrc already exists and is a symbolic link
-	fi
+    exit 0
 fi
