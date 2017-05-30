@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+
+namespace ${TM_FILEPATH/^(?:(?:.*\/src\/([^\/]*)\/)?)|(?:([^\/]*)\/)|(?:([^\/]*))/(?1$1)(?2\\$2)/g};
+
+interface ${TM_FILENAME/\.[^.]+//}${1/.+/ extends /}${1:ExtendsName}
+{
+    $0
+}
+
+]]></content>
+    <tabTrigger>interface</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

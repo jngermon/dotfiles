@@ -1,9 +1,10 @@
 # dotfiles
 
-* .gitconfig
-* .zshrc
-* .vimrc
-* .i3-config
+* git
+* zsh
+* vim
+* i3
+* sublime text 3
 
 ## Installation
 To install all packages

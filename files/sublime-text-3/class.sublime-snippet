@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+
+namespace ${TM_FILEPATH/^(?:(?:.*\/(?:src|tests)\/([^\/]*)\/)?)|(?:([^\/]*)\/)|(?:([^\/]*))/(?1$1)(?2\\$2)/g};
+
+class ${TM_FILENAME/\.[^.]+//}${1/.+/ extends /}${1:ExtendsName}${2/.+/ implements /}${2:ImplementsName}
+{
+    $0
+}
+
+]]></content>
+    <tabTrigger>class</tabTrigger>
+    <scope>source.php</scope>
+</snippet>

@@ -1,0 +1,22 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"Behat Features",
+		"Column Select",
+		"Compare Side-By-Side",
+		"Dockerfile Syntax Highlighting",
+		"EditorConfig",
+		"JavaScriptNext - ES6 Syntax",
+		"Package Control",
+		"PHP Completions Kit",
+		"php-grammar",
+		"php-snippets",
+		"PHP-Twig",
+		"Phpcs"
+	]
+}

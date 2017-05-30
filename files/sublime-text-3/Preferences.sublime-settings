@@ -1,0 +1,11 @@
+{
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"PHP",
+		"Vintage"
+	],
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "true"
+}

@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+<trans-unit id="${1:code}">
+    <source>$1</source>
+    <target>${2:target}</target>
+</trans-unit>
+
+]]></content>
+    <tabTrigger>tu</tabTrigger>
+    <scope>text.xml</scope>
+</snippet>

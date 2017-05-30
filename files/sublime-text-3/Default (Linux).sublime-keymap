@@ -1,0 +1,33 @@
+[
+    { "keys": ["ctrl+alt+up"], "command": "column_select", "args": {"by": "lines", "forward": false}},
+    { "keys": ["ctrl+alt+down"], "command": "column_select", "args": {"by": "lines", "forward": true}},
+    { "keys": ["ctrl+alt+pageup"], "command": "column_select", "args": {"by": "pages", "forward": false}},
+    { "keys": ["ctrl+alt+pagedown"], "command": "column_select", "args": {"by": "pages", "forward": true}},
+
+    { "keys": ["ctrl+&"], "command": "focus_group", "args": { "group": 0 } },
+    { "keys": ["ctrl+é"], "command": "focus_group", "args": { "group": 1 } },
+    { "keys": ["ctrl+shift+&"], "command": "move_to_group", "args": { "group": 0 } },
+    { "keys": ["ctrl+shift+é"], "command": "move_to_group", "args": { "group": 1 } },
+    { "keys": ["ctrl+à"], "command": "focus_side_bar" },
+
+    {
+        "keys": ["alt+shift+&"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1]]
+        }
+    },
+    {
+        "keys": ["alt+shift+é"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 0.5, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+        }
+    }
+]
