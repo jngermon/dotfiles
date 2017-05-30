@@ -13,10 +13,15 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'msanders/snipmate.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'auto_mkdir'
+Plugin 'ctrlp.vim'
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -60,3 +65,14 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+" auto reloading files
+set autoread
+au CursorHold * checktime
+
+" Send more characters for redraws
+set ttyfast
+" Enable mouse use in all modes
+set mouse=a
+" Set this to the name of your terminal that supports mouse codes.
+" Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
+set ttymouse=xterm2
