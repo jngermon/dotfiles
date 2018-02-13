@@ -14,9 +14,11 @@
 		"JavaScriptNext - ES6 Syntax",
 		"Package Control",
 		"PHP Completions Kit",
-		"php-grammar",
+		"PHP Getters and Setters",
 		"php-snippets",
 		"PHP-Twig",
-		"Phpcs"
+		"Phpcs",
+		"PHPGrammar",
+		"SCSS"
 	]
 }
