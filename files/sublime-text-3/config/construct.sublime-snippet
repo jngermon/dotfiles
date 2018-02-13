@@ -9,6 +9,6 @@ public function __construct(
 ]]></content>
     <tabTrigger>construct</tabTrigger>
     <scopeName>language_construct</scopeName>
-    <scope>source.php - comment - constant.other.class - entity.name - meta.catch - meta.class - meta.function.arguments - meta.use - string - variable.other</scope>
+    <scope>source.php</scope>
     <description>PHP: constructor</description>
 </snippet>
