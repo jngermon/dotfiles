@@ -2,7 +2,7 @@
 
 . "$(dirname $0)/common.sh"
 
-if [ ! $(which subl) ]; then
+if [ ! $(which sublime) ]; then
     echo "Sublime Text is not installed"
 else
 
