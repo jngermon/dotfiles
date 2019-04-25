@@ -1,7 +1,7 @@
 .PHONY: help git-config zshrc vimrc i3-config
 .DEFAULT_GOAL := help
 
-all: git-config zshrc vimrc i3-config sublime-text-3 mysql-workbench ## Install all packages
+all: git-config zshrc vimrc i3-config sublime-text-3 mysql-workbench docker## Install all packages
 
 git-config: ## Install config files for Git
 	assets/git-config.sh
@@ -21,6 +21,9 @@ sublime-text-3: ## Install config files for Sublime Text 3
 
 mysql-workbench: ## Install patch files for mysql-workbench with i3
 	assets/mysql-workbench.sh
+
+docker: ## Install docker-init
+	assets/docker.sh
 
 help:
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

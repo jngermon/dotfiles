@@ -1,0 +1,18 @@
+#!/bin/bash -u
+if [ "$(whoami)" = 'root' ]
+then
+    echo "No need to run this script as root"
+    exit 1
+fi
+
+# Launch docker dns container
+dnsdockname=dns_dock
+docker ps -a |grep "$dnsdockname"
+if [ $? -eq 0 ]
+then
+    docker start dns_dock
+else
+    docker run --detach=true --volume=/var/run/docker.sock:/var/run/docker.sock \
+        --publish=172.17.0.1:53:53/udp --name dns_dock tonistiigi/dnsdock:amd64-1.13.1
+fi
+
