@@ -15,10 +15,12 @@
 		"Package Control",
 		"PHP Completions Kit",
 		"PHP Getters and Setters",
-		"php-snippets",
 		"PHP-Twig",
 		"Phpcs",
 		"PHPGrammar",
-		"SCSS"
+		"PHPSnippets",
+		"SCSS",
+		"TypeScript",
+		"TypescriptCompletion"
 	]
 }
