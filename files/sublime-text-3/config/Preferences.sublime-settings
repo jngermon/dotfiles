@@ -4,6 +4,14 @@
 	[
 		"Vintage"
 	],
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"node_modules/*",
+		"vendor/*",
+		"build/*",
+		"docker/*"
+	],
 	"show_encoding": "true",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
