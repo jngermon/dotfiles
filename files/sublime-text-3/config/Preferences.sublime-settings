@@ -14,7 +14,10 @@
 		"node_modules/*",
 		"vendor/*",
 		"build/*",
-		"docker/*"
+		"web/build/*",
+		"docker/*",
+		"var/cache/*",
+		"var/logs/*"
 	],
 	"show_encoding": "true",
 	"translate_tabs_to_spaces": true,
