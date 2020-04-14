@@ -15,6 +15,11 @@ else
 
     createSymlink $I3STATUS $I3STATUS_DEST
 
+    I3GETWINDOWCRITERIA="$(pwd)/files/i3/i3-get-window-criteria"
+    I3GETWINDWOCRITERIA_DEST="$HOME/bin/i3-get-window-criteria"
+
+    createSymlink $I3GETWINDOWCRITERIA $I3GETWINDWOCRITERIA_DEST
+
     if [ $? = 0 ]; then
         i3 reload
     fi
