@@ -6,7 +6,7 @@
 	"font_size": 10,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
 	"index_exclude_patterns":
 	[
@@ -22,5 +22,5 @@
 	"show_encoding": "true",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": "true"
+	"word_wrap": "true",
 }

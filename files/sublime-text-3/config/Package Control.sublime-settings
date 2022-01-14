@@ -5,14 +5,12 @@
 	],
 	"installed_packages":
 	[
-		"Babel",
 		"Behat Features",
 		"Case Conversion",
 		"Column Select",
 		"Compare Side-By-Side",
 		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
-		"JavaScriptNext - ES6 Syntax",
 		"Package Control",
 		"PHP Completions Kit",
 		"PHP Getters and Setters",
@@ -25,6 +23,6 @@
 		"SCSS",
 		"SubLilyPond",
 		"TypeScript",
-		"TypescriptCompletion"
-	]
+		"TypescriptCompletion",
+	],
 }
