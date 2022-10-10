@@ -6,6 +6,7 @@
 	"font_size": 10,
 	"ignored_packages":
 	[
+		"TypeScript",
 		"Vintage",
 	],
 	"index_exclude_patterns":
