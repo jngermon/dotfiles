@@ -1,0 +1,52 @@
+{
+    "51901736-3e30-4e36-904b-3c74403f6bd7": {
+        "id": "51901736-3e30-4e36-904b-3c74403f6bd7",
+        "name": "Ecosia Search",
+        "keyword": "g",
+        "cmd": "https://www.ecosia.org/search?q=%s&addon=opensearch",
+        "icon": null,
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1665780091.1120973
+    },
+    "bf359f5c-c02a-4737-b388-749174b7388f": {
+        "id": "bf359f5c-c02a-4737-b388-749174b7388f",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1665780091.1121182
+    },
+    "cd4883c2-b9e2-470a-a5ee-f3d0db49b5a6": {
+        "id": "cd4883c2-b9e2-470a-a5ee-f3d0db49b5a6",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1665780091.112133
+    },
+    "4388873a-126a-435f-b6dd-267f36f056fd": {
+        "id": "4388873a-126a-435f-b6dd-267f36f056fd",
+        "name": "NPM",
+        "keyword": "npm",
+        "cmd": "https://www.npmjs.com/search?q=%s",
+        "icon": null,
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1665780449.9853702
+    },
+    "9f656f68-28c4-4622-ad75-c6f06b76094c": {
+        "id": "9f656f68-28c4-4622-ad75-c6f06b76094c",
+        "name": "Word References",
+        "keyword": "wr",
+        "cmd": "https://www.wordreference.com/fren/%s",
+        "icon": null,
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1665780492.2143636
+    }
+}

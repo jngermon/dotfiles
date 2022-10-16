@@ -12,9 +12,11 @@ zshrc: ## Install config files for Zsh
 vimrc: ## Install config files for vim
 	assets/vimrc.sh
 
+i3-install: ## Install i3 and dependencies
+	assets/i3-install.sh
+
 i3-config: ## Install config files for i3
 	assets/i3-config.sh
-
 
 sublime-text-3: ## Install config files for Sublime Text 3
 	assets/sublime-text-3.sh

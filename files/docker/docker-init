@@ -14,4 +14,3 @@ else
     docker run --detach=true --volume=/var/run/docker.sock:/docker.sock \
         --publish=172.17.0.1:53:53/udp --name dns phensley/docker-dns --domain docker
 fi
-

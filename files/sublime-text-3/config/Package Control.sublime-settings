@@ -12,6 +12,7 @@
 		"Compare Side-By-Side",
 		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
+		"INI",
 		"Package Control",
 		"PHP Completions Kit",
 		"PHP Getters and Setters",
@@ -25,5 +26,6 @@
 		"SubLilyPond",
 		"TypeScript",
 		"TypescriptCompletion",
+		"UnicodeMath",
 	],
 }
