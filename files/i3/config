@@ -201,6 +201,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 for_window [instance="gnome-calculator"] floating enable
 for_window [instance="ulauncher"] floating enable
 for_window [instance="Blender" title="Blender Preferences"] floating enable
+for_window [instance="pulseUI"] floating enable
 
 exec_always --no-startup-id /home/jngermon/.screenlayout/home.sh
 exec_always --no-startup-id /home/jngermon/.dotfiles/files/polybar/launch.sh

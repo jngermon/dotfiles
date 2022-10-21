@@ -55,5 +55,9 @@ else
     WALLPAPERS_DEST="$HOME_WALLPAPERS/dotfiles"
     createSymlink $WALLPAPERS $WALLPAPERS_DEST
 
+    USERDIR_DIR="$(pwd)/files/i3/user-dirs.dirs"
+    USERDIR_DIR_DEST="$HOME/.config/user-dirs.dirs"
+    createSymlink $USERDIR_DIR $USERDIR_DIR_DEST
+
     exit 0
 fi
