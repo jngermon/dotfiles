@@ -30,5 +30,14 @@
             "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
         }
     },
-    {"keys": ["alt+shift+f"], "command": "reindent", "args": {"single_line": false}}
+    {"keys": ["alt+shift+f"], "command": "reindent", "args": {"single_line": false}},
+
+    /* PHP Companion*/
+    { "keys": ["f6"], "command": "expand_fqcn" },
+    { "keys": ["shift+f6"], "command": "expand_fqcn", "args": {"leading_separator": true} },
+    { "keys": ["f5"], "command": "find_use" },
+    { "keys": ["f4"], "command": "import_namespace" },
+    { "keys": ["f8"], "command": "implement" },
+    { "keys": ["shift+f12"], "command": "goto_definition_scope" },
+    { "keys": ["f7"], "command": "insert_php_constructor_property" }
 ]

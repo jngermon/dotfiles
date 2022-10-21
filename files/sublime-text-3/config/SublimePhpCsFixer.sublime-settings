@@ -1,0 +1,4 @@
+{
+    "config": "${folder}/.php-cs-fixer.php",
+    "on_save": true
+}
