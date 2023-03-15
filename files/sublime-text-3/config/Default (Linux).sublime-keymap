@@ -39,5 +39,18 @@
     { "keys": ["f4"], "command": "import_namespace" },
     { "keys": ["f8"], "command": "implement" },
     { "keys": ["shift+f12"], "command": "goto_definition_scope" },
-    { "keys": ["f7"], "command": "insert_php_constructor_property" }
+    { "keys": ["f7"], "command": "insert_php_constructor_property" },
+
+    { "keys": ["ctrl+k", "ctrl+i"], "command": "lsp_execute",
+      "args": {
+        "session_name": "LSP-typescript",
+        "command_name": "_typescript.organizeImports",
+        "command_args": ["${file}"]
+      }
+    },
+    {
+     "keys": ["ctrl+<"],
+     "command": "lsp_code_actions",
+     "context": [{"key": "lsp.session_with_capability", "operand": "codeActionProvider"}]
+    }
 ]
