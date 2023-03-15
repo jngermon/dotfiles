@@ -55,6 +55,7 @@ plugins=(git docker docker-compose ssh-agent)
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+export DEV=~/srv
 
 source $ZSH/oh-my-zsh.sh
 
