@@ -192,6 +192,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Tools
 bindsym XF86Calculator exec "gnome-calculator"
+bindsym Print exec "gnome-screenshot -i"
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -207,6 +208,7 @@ exec_always --no-startup-id /home/jngermon/.screenlayout/home.sh
 exec_always --no-startup-id /home/jngermon/.dotfiles/files/polybar/launch.sh
 exec_always --no-startup-id /home/jngermon/.dotfiles/files/i3/wallpaper.sh
 exec_always --no-startup-id numlockx
+exec_always --no-startup-id nm-applet
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
