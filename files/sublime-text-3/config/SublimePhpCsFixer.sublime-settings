@@ -1,4 +1,4 @@
 {
-    "config": "${folder}/.php-cs-fixer.php",
+    "config": "${folder}/.php-cs-fixer.dist.php",
     "on_save": true
 }
