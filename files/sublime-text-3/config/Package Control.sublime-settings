@@ -12,6 +12,7 @@
 		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
 		"INI",
+		"Line Endings Unify",
 		"LSP",
 		"LSP-html",
 		"LSP-intelephense",

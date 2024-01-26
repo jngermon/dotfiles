@@ -6,7 +6,6 @@
 	"font_size": 11,
 	"ignored_packages":
 	[
-		"TypeScript",
 		"Vintage",
 	],
 	"index_exclude_patterns":
@@ -25,4 +24,5 @@
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": "true",
 	"theme": "Default Dark.sublime-theme",
+	"index_files": true,
 }
