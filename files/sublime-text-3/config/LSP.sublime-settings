@@ -3,5 +3,5 @@
     "lsp_code_actions_on_save": {
         "source.addMissingImports": false,
         "source.organizeImports": false,
-    },
+    }
 }
