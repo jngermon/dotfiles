@@ -97,7 +97,7 @@ bindsym $mod+q focus parent
 
 workspace 1 output DP-0
 workspace 5 output DP-2
-workspace 12 output DP-4
+workspace 12 output DP-3
 
 # switch to workspace
 bindsym $mod+ampersand workspace 1
@@ -194,9 +194,9 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Calculator exec "gnome-calculator"
 bindsym Print exec "gnome-screenshot -i"
 
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 20- # decrease screen brightness
 
 # Floating windows
 for_window [instance="gnome-calculator"] floating enable
