@@ -91,3 +91,5 @@ alias dockip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+alias dps='docker ps --format "table {{.ID}} {{.Names}}\t{{.Status}}"'
+
