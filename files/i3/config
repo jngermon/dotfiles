@@ -210,6 +210,7 @@ exec_always --no-startup-id /home/jngermon/.dotfiles/files/i3/wallpaper.sh
 exec_always --no-startup-id numlockx
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec_always --no-startup-id picom
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
