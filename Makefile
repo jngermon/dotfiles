@@ -33,5 +33,8 @@ kitty-install: ## Install kitty and dependencies
 kitty-config: ## Install config files for kitty
 	assets/kitty-config.sh
 
+nvim-install: ## Install Nvim and dependencies
+	assets/nvim-install.sh
+
 help:
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
