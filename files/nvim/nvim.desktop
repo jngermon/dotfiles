@@ -2,7 +2,7 @@
 Name=NeoVim
 Comment=IDE
 Exec=/usr/local/bin/nvim
-Icon=/opt/nvim-linux64/share/icons/hicolor/128x128/apps/nvim.png
+Icon=/opt/nvim-linux-x86_64/share/icons/hicolor/128x128/apps/nvim.png
 Terminal=true
 Type=Application
 Categories=Utility;Application;Development;
