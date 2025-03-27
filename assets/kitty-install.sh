@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt install kitty picom chafa
+sudo apt install kitty picom chafa xclip
 sudo update-alternatives --config x-terminal-emulator
 
 curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/BitstreamVeraSansMono.zip
