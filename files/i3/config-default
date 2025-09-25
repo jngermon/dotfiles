@@ -196,8 +196,8 @@ bindsym XF86Calculator exec "gnome-calculator"
 bindsym Print exec "gnome-screenshot -i"
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 20- # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +10% # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 10%- # decrease screen brightness
 
 # Keyboard tools
 bindsym $mod+twosuperior exec "keyboard i3 default"
