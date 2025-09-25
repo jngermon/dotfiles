@@ -1,9 +1,16 @@
 {
-    "com.github.noam09.ulauncher-gnome-control-center": {
-        "id": "com.github.noam09.ulauncher-gnome-control-center",
-        "url": "https://github.com/noam09/ulauncher-gnome-control-center",
-        "updated_at": "2024-12-13T09:31:14.166496",
-        "last_commit": "ff8b0875ed5d78dcc1db5f638b201a460cc6d7f7",
-        "last_commit_time": "2020-10-06T08:36:54"
+    "com.github.leinardi.ulauncher-exit-gnome": {
+        "id": "com.github.leinardi.ulauncher-exit-gnome",
+        "url": "https://github.com/leinardi/ulauncher-exit-gnome",
+        "updated_at": "2025-06-27T09:15:28.170472",
+        "last_commit": "804710414d28128bbc9c8fada8fa9a7fbb572479",
+        "last_commit_time": "2020-02-02T09:03:27"
+    },
+    "com.github.jngermon.ulauncher-gnome-control-center": {
+        "id": "com.github.jngermon.ulauncher-gnome-control-center",
+        "url": "https://github.com/jngermon/ulauncher-gnome-control-center",
+        "updated_at": "2025-06-27T09:54:55.672849",
+        "last_commit": "aa8845f83b45a06d8f6a05a7d942217437568621",
+        "last_commit_time": "2025-06-27T07:54:46"
     }
 }
