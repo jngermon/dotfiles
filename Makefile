@@ -18,9 +18,6 @@ i3-install: ## Install i3 and dependencies
 i3-config: ## Install config files for i3
 	assets/i3-config.sh
 
-sublime-text-3: ## Install config files for Sublime Text 3
-	assets/sublime-text-3.sh
-
 mysql-workbench: ## Install patch files for mysql-workbench with i3
 	assets/mysql-workbench.sh
 

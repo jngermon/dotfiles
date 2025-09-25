@@ -1,8 +1,0 @@
-<snippet>
-    <content><![CDATA[
-namespace ${TM_FILEPATH/^(?:(?:.*\/(?:src|tests)\/([^\/]*)\/)?)|(?:([^\/]*)\/)|(?:([^\/]*))/(?1App\\$1)(?2\\$2)/g};
-
-]]></content>
-    <tabTrigger>ns</tabTrigger>
-    <scope>source.php</scope>
-</snippet>
