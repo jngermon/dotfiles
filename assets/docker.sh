@@ -5,10 +5,11 @@
 if [ ! $(which docker) ]; then
     echo "Docker is not installed"
 else
-    DOCKER_INIT="$(pwd)/files/docker/docker-init"
-    DOCKER_INIT_DEST="$HOME/bin/docker-init"
 
-    createSymlink $DOCKER_INIT $DOCKER_INIT_DEST
+    LOCAL_TRAEFIK="$(pwd)/files/docker/local-traefik"
+    LOCAL_TRAEFIK_DEST="$HOME/bin/local-traefik"
+
+    createSymlink $LOCAL_TRAEFIK $LOCAL_TRAEFIK_DEST
 
     exit 0
 fi

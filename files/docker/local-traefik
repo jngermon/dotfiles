@@ -1,0 +1,185 @@
+#!/bin/bash
+
+if ! docker info >/dev/null 2>&1; then
+    echo "#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#"
+    echo "# Docker n'est pas démarré. Veuillez démarrer Docker et réessayer #"
+    echo "#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#"
+    exit 1
+fi
+FILE="$(realpath "${BASH_SOURCE[0]}")"
+cd
+mkdir -p ~/.local-traefik
+cd ~/.local-traefik
+mkdir -p certs
+
+CERT_KEY="certs/local-ca.key"
+CERT_CSR="certs/local-ca.csr"
+CERT_CRT="certs/local-ca.crt"
+
+if [ ! -f "$CERT_CRT" ] || (openssl x509 -checkend 0 -noout -in "$CERT_CRT" | grep -q 'Certificate has expired'); then
+    echo "#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#"
+    echo "# Certificat inexistant ou expiré. Génération d'un nouveau certificat...#"
+    echo "#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#"
+
+    # Générer le certificat et la clé
+    cat >certs/openssl.cnf <<EOF
+[ req ]
+default_bits       = 2048
+distinguished_name = req_distinguished_name
+req_extensions     = v3_req
+prompt             = no
+
+[ req_distinguished_name ]
+C = FR
+ST = Vienne
+L = Poitiers
+O = Code 202
+OU = IT
+CN = LOCAL
+
+[ v3_req ]
+keyUsage = critical, cRLSign, keyCertSign
+extendedKeyUsage = critical, serverAuth, clientAuth
+basicConstraints = critical, CA:TRUE
+EOF
+
+    openssl genrsa -out "$CERT_KEY" 4096
+    openssl req -new -key "$CERT_KEY" -out "$CERT_CSR" -batch -config certs/openssl.cnf
+    openssl x509 -req -in "$CERT_CSR" -signkey "$CERT_KEY" -out "$CERT_CRT" -days 3650 -extensions v3_req -extfile certs/openssl.cnf
+
+    # Instructions supplémentaires pour le certificat
+    sudo cp certs/local-ca.crt /usr/local/share/ca-certificates
+    sudo update-ca-certificates
+else
+    echo "+---------------------------------------------------------------------+"
+    echo "|  Le certificat est encore valide, pas de régénération nécessaire.   |"
+    echo "+---------------------------------------------------------------------+"
+fi
+
+cat >tls-certs.toml <<EOF
+[[tls.certificates]]
+    certFile = "/certs/local.crt"
+    keyFile = "/certs/local.key"
+EOF
+
+cat >traefik.toml <<EOF
+[api]
+    dashboard = true
+
+[log]
+    filePath= "/dev/stdout"
+    level= "DEBUG"
+
+[entryPoints]
+    [entryPoints.web]
+        address = ":80"
+        [entryPoints.web.http]
+            [entryPoints.web.http.redirections]
+                [entryPoints.web.http.redirections.entryPoint]
+                    to = "websecure"
+                    scheme = "https"
+                    permanent = true
+
+    [entryPoints.websecure]
+        address = ":443"
+        [entryPoints.websecure.http.tls]
+    [entryPoints.postgres]
+        address = ":5432"
+
+
+[providers]
+    [providers.docker]
+        watch = true
+        exposedByDefault = false
+    [providers.file]
+        filename = "/etc/traefik/tls-certs.toml"
+EOF
+
+cat >docker-compose.yml <<EOF
+services:
+  traefik:
+    image: "traefik:v3.5"
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "5432:5432"
+    volumes:
+      - ./tls-certs.toml:/etc/traefik/tls-certs.toml
+      - ./traefik.toml:/etc/traefik/traefik.toml
+      - ~/.local-traefik/certs/:/certs/
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.dashboard.rule=Host(\`traefik.code202.local\`)"
+        - "traefik.http.routers.dashboard.entrypoints=websecure"
+        - "traefik.http.routers.dashboard.service=api@internal"
+        - "traefik.http.routers.dashboard.tls=true"
+    networks:
+        - proxy
+    command:
+      - /bin/sh
+      - -c
+      - |
+        apk add --update openssl
+        apk add --update curl
+
+        until curl --silent --unix-socket /var/run/docker.sock http://localhost/_ping | grep "OK" > /dev/null; do
+            echo "L'API Docker n\'est pas encore prête";
+            exit 2;
+        done;
+
+        # Créer la clé privée
+        openssl genrsa -out /certs/local.key 2048
+
+        # Générer le CSR (Certificate Signing Request)
+        cat > /certs/local-csr.req <<EOF
+        [ req ]
+        prompt = no
+        distinguished_name = req_distinguished_name
+        req_extensions = req_ext
+        copy_extensions = yes
+
+        [req_distinguished_name]
+        C = FR
+        ST = Vienne
+        L = Poitiers
+        O = Code 202
+        OU = IT
+        CN = LOCAL
+        emailAddress = jn.germon@code202.fr
+        commonName = code202.local
+
+        [req_ext]
+        subjectAltName = @alt_names
+
+        [alt_names]
+        DNS.1 = code202.local
+        DNS.2 = *.code202.local
+        DNS.3 = localhost
+        IP.1 = 127.0.0.1
+        IP.2 = 0.0.0.0
+        EOF
+
+        # Générer la requête de certificat
+        openssl req -new -key /certs/local.key -out /certs/local.csr -config /certs/local-csr.req
+
+        # Signer le certificat avec le CA local
+        openssl x509 -req -in /certs/local.csr -CA /certs/local-ca.crt -CAkey /certs/local-ca.key \
+        -CAcreateserial -out /certs/local.crt -days 365 -extensions req_ext -extfile /certs/local-csr.req
+
+        # Démarrer Traefik après la génération des certificats
+        traefik
+
+networks:
+  proxy:
+    name: traefik-public
+    external: true
+EOF
+
+docker compose down
+docker compose up -d
+
+TARGET="~/bin/local-traefik"
+echo "-----------------------------------------------------------------------------------------------------------------------"
+echo "      Dashboard Traefik : https://traefik.code202.local/dashboard/#/ "
