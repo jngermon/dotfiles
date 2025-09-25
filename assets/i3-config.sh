@@ -36,8 +36,12 @@ else
     createSymlink $ULAUNCHER $ULAUNCHER_DEST
 
     GTK_SETTINGS="$(pwd)/files/i3/gtk-settings.ini"
-    GTK_SETTINGS_DEST="$HOME/.config/gtk-3.0/settings.ini"
+    GTK_SETTINGS_DEST="$HOME/.config/gtk-4.0/settings.ini"
     createSymlink $GTK_SETTINGS $GTK_SETTINGS_DEST
+
+    GTK_PORTAL="$(pwd)/files/i3/gtk-portals.conf"
+    GTK_PORTAL_DEST="$HOME/.config/xdg-desktop-portal/portals.conf"
+    createSymlink $GTK_PORTAL $GTK_PORTAL_DEST
 
     ARANDR_LAYOUT="$(pwd)/files/arandr/"
     ARANDR_LAYOUT_DEST="$HOME/.screenlayout"
