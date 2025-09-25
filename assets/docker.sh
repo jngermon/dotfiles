@@ -6,6 +6,8 @@ if [ ! $(which docker) ]; then
     echo "Docker is not installed"
 else
 
+    sudo apt-get install libnss3-tools
+
     LOCAL_TRAEFIK="$(pwd)/files/docker/local-traefik"
     LOCAL_TRAEFIK_DEST="$HOME/bin/local-traefik"
 

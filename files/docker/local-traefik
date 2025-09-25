@@ -180,6 +180,7 @@ EOF
 docker compose down
 docker compose up -d
 
-TARGET="~/bin/local-traefik"
+certutil -d sql:$HOME/.pki/nssdb -A -i ~/.local-traefik/certs/local-ca.crt -n local-traefik -t TC,C,C
+
 echo "-----------------------------------------------------------------------------------------------------------------------"
 echo "      Dashboard Traefik : https://traefik.code202.local/dashboard/#/ "
