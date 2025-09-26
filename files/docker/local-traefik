@@ -33,7 +33,7 @@ prompt             = no
 C = FR
 ST = Vienne
 L = Poitiers
-O = Code 202
+O = code202.home
 OU = IT
 CN = LOCAL
 
@@ -112,7 +112,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.dashboard.rule=Host(\`traefik.code202.local\`)"
+        - "traefik.http.routers.dashboard.rule=Host(\`traefik.code202.home\`)"
         - "traefik.http.routers.dashboard.entrypoints=websecure"
         - "traefik.http.routers.dashboard.service=api@internal"
         - "traefik.http.routers.dashboard.tls=true"
@@ -145,18 +145,18 @@ services:
         C = FR
         ST = Vienne
         L = Poitiers
-        O = Code 202
+        O = code202.home
         OU = IT
         CN = LOCAL
         emailAddress = jn.germon@code202.fr
-        commonName = code202.local
+        commonName = code202.home
 
         [req_ext]
         subjectAltName = @alt_names
 
         [alt_names]
-        DNS.1 = code202.local
-        DNS.2 = *.code202.local
+        DNS.1 = code202.home
+        DNS.2 = *.code202.home
         DNS.3 = localhost
         IP.1 = 127.0.0.1
         IP.2 = 0.0.0.0
@@ -184,4 +184,4 @@ docker compose up -d
 certutil -d sql:$HOME/.pki/nssdb -A -i ~/.local-traefik/certs/local-ca.crt -n local-traefik -t TC,C,C
 
 echo "-----------------------------------------------------------------------------------------------------------------------"
-echo "      Dashboard Traefik : https://traefik.code202.local/dashboard/#/ "
+echo "      Dashboard Traefik : https://traefik.code202.home/dashboard/#/ "
