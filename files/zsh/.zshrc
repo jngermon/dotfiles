@@ -93,4 +93,3 @@ alias pbpaste='xclip -selection clipboard -o'
 
 alias dps='docker ps --format "table {{.ID}} {{.Names}}\t{{.Status}}"'
 
-export PATH="/home/jngermon/.local/bin:$PATH"
