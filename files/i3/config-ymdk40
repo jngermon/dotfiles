@@ -182,9 +182,9 @@ bindsym $mod+k exec google-chrome-stable
 #bindsym $mod+F3 exec xrandr --output eDP-1 --left-of HDMI-1
 
 # Manage audio
-bindsym XF86AudioRaiseVolume exec "amixer -D pulse -q sset Master,0 5%+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -D pulse -q sset Master,0 5%- unmute"
-bindsym XF86AudioMute exec "amixer -D pulse -q sset Master,0 toggle"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5%+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5%- unmute"
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
@@ -196,8 +196,8 @@ bindsym XF86Calculator exec "gnome-calculator"
 bindsym Print exec "gnome-screenshot -i"
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 20- # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +10% # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 10%- # decrease screen brightness
 
 # Keyboard tools
 bindsym Hiragana_Katakana exec "keyboard i3 ymdk40"
