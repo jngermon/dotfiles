@@ -212,11 +212,12 @@ bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 10%- # decreas
 bindsym Hiragana_Katakana exec "keyboard i3 ymdk40"
 bindsym $mod+Hiragana_Katakana exec "keyboard i3 toggle"
 bindsym $mod+grave exec "keyboard i3 default"
-bindsym XF86Launch5 exec "keyboard kbmap quit"
-bindsym XF86Launch6 exec "keyboard kbmap 1"
-bindsym XF86Launch7 exec "keyboard kbmap 2"
-bindsym XF86Launch8 exec "keyboard kbmap 3"
-bindsym XF86Launch9 exec "keyboard kbmap 4"
+bindsym XF86Tools exec "keyboard kbmap quit"
+bindsym XF86Launch5 exec "keyboard kbmap 1"
+bindsym XF86Launch6 exec "keyboard kbmap 2"
+bindsym XF86Launch7 exec "keyboard kbmap 3"
+bindsym XF86Launch8 exec "keyboard kbmap 4"
+bindsym XF86Launch9 exec "keyboard kbmap 5"
 
 # Floating windows
 for_window [instance="gnome-calculator"] floating enable
