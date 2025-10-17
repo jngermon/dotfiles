@@ -211,6 +211,8 @@ for_window [instance="ulauncher"] floating enable
 for_window [instance="Blender" title="Blender Preferences"] floating enable
 for_window [instance="pulseUI"] floating enable
 for_window [class="feh-kbmap"] floating enable
+for_window [all] title_window_icon on
+for_window [all] title_window_icon padding 10px
 
 exec_always --no-startup-id /home/jngermon/.screenlayout/home.sh
 exec_always --no-startup-id /home/jngermon/.dotfiles/files/polybar/launch.sh
@@ -228,3 +230,4 @@ exec_always --no-startup-id sleep 5 && picom -b
   client.urgent           #CB4B16 #FD6517 #fba922 #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000
   client.background       #2B2C2B
+
