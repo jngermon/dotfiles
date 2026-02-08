@@ -8,3 +8,7 @@ declare -A configurations1=(
     [name]='ymdk40'
     [extra]='setxkbmap us altgr-intl'
 )
+declare -A configurations2=(
+    [name]='moonlander'
+    [extra]='setxkbmap code202 moonlander'
+)

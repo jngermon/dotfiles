@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+  <layoutList>
+    <layout>
+      <configItem>
+        <name>code202</name>
+        <shortDescription>custom</shortDescription>
+        <description>Custom for Code 202</description>
+        <countryList>
+          <iso3166Id>FR</iso3166Id>
+        </countryList>
+        <languageList>
+          <iso639Id>fra</iso639Id>
+        </languageList>
+      </configItem>
+    </layout>
+  </layoutList>
+</xkbConfigRegistry>

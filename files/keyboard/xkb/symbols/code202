@@ -1,0 +1,52 @@
+// My symbols
+
+default partial alphanumeric_keys
+xkb_symbols "moonlander" {
+
+    // include "fr(basic)"
+
+    name[Group1]="French";
+
+    key <LatA>	{ [         a,          A,       agrave,       Agrave ]	};
+    key <LatB>	{ [         b,          B ]	};
+    key <LatC>	{ [         c,          C,     ccedilla,     Ccedilla ]	};
+    key <LatD>	{ [         d,          D,   numbersign,   numbersign ]	};
+    key <LatE>	{ [         e,          E,       egrave,       Egrave ]	};
+    key <AE02>	{ [    eacute,     Eacute,  ecircumflex,  Ecircumflex ]	};
+    key <LatF>	{ [         f,          F ]	};
+    key <LatG>	{ [         g,          G ]	};
+    key <LatH>	{ [         h,          H ]	};
+    key <LatI>	{ [         i,          I, dead_diaeresis ]	};
+    key <LatJ>	{ [         j,          J ]	};
+    key <LatK>	{ [         k,          K,      section ]	};
+    key <LatL>	{ [         l,          L,     sterling ]	};
+    key <LatM>	{ [         m,          M,           mu ]	};
+    key <LatN>	{ [         n,          N ]	};
+    key <LatO>	{ [         o,          O,           at ]	};
+    key <LatP>	{ [         p,          P,      percent ]	};
+    key <LatQ>	{ [         q,          Q ]	};
+    key <LatR>	{ [         r,          R ]	};
+    key <LatS>	{ [         s,          S,       dollar,     EuroSign ]	};
+    key <LatT>	{ [         t,          T ]	};
+    key <LatU>	{ [         u,          U,       ugrave,       Ugrave ]	};
+    key <LatV>	{ [         v,          V ]	};
+    key <LatW>	{ [         w,          W ]	};
+    key <LatX>	{ [         x,          X,     asterisk ]	};
+    key <LatY>	{ [         y,          Y,        equal ]	};
+    key <LatZ>	{ [         z,          Z ]	};
+    
+    key <BKSP>	{ [ BackSpace,  BackSpace,       Delete ]	};
+    key <AB08>	{ [     comma,     period,     question,       exclam ]	};
+    key <AB10>	{ [     slash,  backslash,          bar,    ampersand ]	};
+    key <AC10>	{ [ semicolon,      colon,   asciitilde ]	};
+    key <AC11>	{ [ apostrophe,  quotedbl,        grave ]	};
+    key <AD11>	{ [ parenleft,       less,  bracketleft,    braceleft ] };
+    key <AD12>	{ [ parenright,   greater, bracketright,   braceright ] };
+    key <AE11>  { [     minus,       plus,  asciicircum, dead_circumflex ]  };
+
+    key <SPCE>  { [     space,      space,   underscore ] };
+
+    key <TLDE>	{ [twosuperior, asciitilde,     notsign,      notsign ]	};
+
+    include "level3(ralt_switch)"
+};

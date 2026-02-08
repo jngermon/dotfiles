@@ -1,0 +1,4 @@
+! option   = symbols
+  code202:moonlander  = +code202(moonlander)
+
+! include %S/evdev
