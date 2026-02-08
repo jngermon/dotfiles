@@ -32,7 +32,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+apostrophe exec i3-sensible-terminal
+bindsym $mod+semicolon exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+k kill
@@ -71,7 +71,7 @@ bindsym $mod+$sup+Up move up
 bindsym $mod+$sup+Right move right
 
 # split in horizontal orientation
-bindsym $mod+period split h
+bindsym $mod+q split h
 
 # split in vertical orientation
 bindsym $mod+comma split v
@@ -80,15 +80,15 @@ bindsym $mod+comma split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Tab layout stacking
+bindsym $mod+BackSpace layout stacking
 bindsym $mod+a layout tabbed
 bindsym $mod+u layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+q floating toggle
+bindsym $mod+g floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+g focus mode_toggle
+bindsym $mod+h focus mode_toggle
 
 # focus the parent container
 #bindsym $mod+q focus parent
@@ -100,33 +100,61 @@ workspace 1 output DP-0
 workspace 5 output DP-2
 workspace 12 output DP-4
 
+set $KP_1 87
+set $KP_2 88
+set $KP_3 89
+set $KP_4 83
+set $KP_5 84
+set $KP_6 85
+set $KP_7 79
+set $KP_8 80
+set $KP_9 81
+set $KP_0 90
 # switch to workspace
-bindsym $mod+Escape workspace 1
-bindsym $mod+b workspace 2
-bindsym $mod+minus workspace 3
-bindsym $mod+p workspace 4
-bindsym $mod+o workspace 5
-bindsym $mod+slash workspace 6
-bindsym $mod+v workspace 7
-bindsym $mod+d workspace 8
-bindsym $mod+l workspace 9
-bindsym $mod+j workspace 10
-bindsym $mod+z workspace 11
-bindsym $mod+w workspace 12
+bindcode $mod+mod2+$KP_1 workspace 1
+bindcode $mod+mod2+$KP_2 workspace 2
+bindcode $mod+mod2+$KP_3 workspace 3
+bindcode $mod+mod2+$KP_4 workspace 4
+bindcode $mod+mod2+$KP_5 workspace 5
+bindcode $mod+mod2+$KP_6 workspace 6
+bindcode $mod+mod2+$KP_7 workspace 7
+bindcode $mod+mod2+$KP_8 workspace 8
+bindcode $mod+mod2+$KP_9 workspace 9
+bindcode $mod+mod2+$KP_0 workspace 10
+bindsym $mod+b workspace B
+bindsym $mod+eacute workspace É
+bindsym $mod+p workspace P
+bindsym $mod+o workspace O
+bindsym $mod+v workspace V
+bindsym $mod+d workspace D
+bindsym $mod+l workspace L
+bindsym $mod+j workspace J
+bindsym $mod+z workspace Z
+bindsym $mod+w workspace W
 
 # move focused container to workspace
-bindsym $mod+$sup+Escape move container to workspace 1
-bindsym $mod+$sup+b move container to workspace 2
-bindsym $mod+$sup+minus move container to workspace 3
-bindsym $mod+$sup+p move container to workspace 4
-bindsym $mod+$sup+o move container to workspace 5
-bindsym $mod+$sup+slash move container to workspace 6
-bindsym $mod+$sup+v move container to workspace 7
-bindsym $mod+$sup+d move container to workspace 8
-bindsym $mod+$sup+l move container to workspace 9
-bindsym $mod+$sup+j move container to workspace 10
-bindsym $mod+$sup+z move container to workspace 11
-bindsym $mod+$sup+w move container to workspace 12
+bindcode $mod+$sup+mod2+$KP_1 move container to workspace 1
+bindcode $mod+$sup+mod2+$KP_2 move container to workspace 2
+bindcode $mod+$sup+mod2+$KP_3 move container to workspace 3
+bindcode $mod+$sup+mod2+$KP_4 move container to workspace 4
+bindcode $mod+$sup+mod2+$KP_5 move container to workspace 5
+bindcode $mod+$sup+mod2+$KP_6 move container to workspace 6
+bindcode $mod+$sup+mod2+$KP_7 move container to workspace 7
+bindcode $mod+$sup+mod2+$KP_8 move container to workspace 8
+bindcode $mod+$sup+mod2+$KP_9 move container to workspace 9
+bindcode $mod+$sup+mod2+$KP_0 move container to workspace 10
+bindsym $mod+$sup+b move container to workspace B
+bindsym $mod+$sup+eacute move container to workspace É
+bindsym $mod+$sup+p move container to workspace P
+bindsym $mod+$sup+o move container to workspace O
+bindsym $mod+$sup+v move container to workspace V
+bindsym $mod+$sup+d move container to workspace D
+bindsym $mod+$sup+l move container to workspace L
+bindsym $mod+$sup+j move container to workspace J
+bindsym $mod+$sup+z move container to workspace Z
+bindsym $mod+$sup+w move container to workspace W
+
+
 
 set $config_i3 I3 : reload (R), restart (S)
 mode "$config_i3" {
@@ -209,10 +237,10 @@ bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +10% # increase 
 bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 10%- # decrease screen brightness
 
 # Keyboard tools
-bindsym Hiragana_Katakana exec "keyboard i3 ymdk40"
-bindsym $mod+Hiragana_Katakana exec "keyboard i3 toggle"
-bindsym $mod+grave exec "keyboard i3 default"
 bindcode 132 exec "keyboard i3 moonlander"
+bindcode $mod+132 exec "keyboard i3 toggle"
+bindsym $mod+twosuperior exec "keyboard i3 default"
+bindsym Hiragana_Katakana exec "keyboard i3 ymdk40"
 bindsym XF86Tools exec "keyboard kbmap quit"
 bindsym XF86Launch5 exec "keyboard kbmap 1"
 bindsym XF86Launch6 exec "keyboard kbmap 2"
