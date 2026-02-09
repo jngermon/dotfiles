@@ -38,7 +38,7 @@ xkb_symbols "moonlander" {
     key <BKSP>	{ [ BackSpace,  BackSpace,       Delete ]	};
     key <AB08>	{ [     comma,     period,     question,       exclam ]	};
     key <AB10>	{ [     slash,  backslash,          bar,    ampersand ]	};
-    key <AC10>	{ [ semicolon,      colon,   asciitilde ]	};
+    key <AC10>	{ [     colon,  semicolon,   asciitilde ]	};
     key <AC11>	{ [ apostrophe,  quotedbl,        grave ]	};
     key <AD11>	{ [ parenleft,       less,  bracketleft,    braceleft ] };
     key <AD12>	{ [ parenright,   greater, bracketright,   braceright ] };
