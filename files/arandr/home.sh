@@ -1,1 +1,1 @@
-center2.sh
+local-one.sh
