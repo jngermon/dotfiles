@@ -4,3 +4,6 @@
 
 #VIM files
 *.swp
+
+#NVIM
+/.neoconf.json
