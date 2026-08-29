@@ -1,6 +1,7 @@
 [user]
 	name = jngermon
-	email = jn.germon@gmail.com
+	email = jn.germon@code202.fr
+	signingkey = 4462316BA167DED1B14A1FEE11D356DAA25ECF5D
 [core]
 	editor = vim
 	excludesfile = /home/jngermon/.gitignore_global
@@ -8,3 +9,9 @@
 	default = simple
 [diff]
     algorithm = patience
+[gpg]
+	format = openpgp
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
