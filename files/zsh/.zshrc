@@ -93,3 +93,5 @@ alias pbpaste='xclip -selection clipboard -o'
 
 alias dps='docker ps --format "table {{.ID}} {{.Names}}\t{{.Status}}"'
 
+# EFF
+export EFF_DOCKER_DIRECTORY="/home/jngermon/.eff/config/docker.env"
