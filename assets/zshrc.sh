@@ -8,6 +8,8 @@ else
     ZSHRC="$(pwd)/files/zsh/.zshrc"
     ZSHRC_DEST="$HOME/.zshrc"
 
+    chsh -s $(which zsh)
+
     createSymlink $ZSHRC $ZSHRC_DEST
 
     if [ $? = 0 ]; then
