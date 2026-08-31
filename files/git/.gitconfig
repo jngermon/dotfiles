@@ -1,7 +1,7 @@
 [user]
 	name = jngermon
 	email = jn.germon@code202.fr
-	signingkey = 4462316BA167DED1B14A1FEE11D356DAA25ECF5D
+	signingkey = 3E9F84A062D04F13D3D6660533CF6F7D684C0E9F
 [core]
 	editor = vim
 	excludesfile = /home/jngermon/.gitignore_global
