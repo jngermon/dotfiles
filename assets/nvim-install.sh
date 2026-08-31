@@ -7,7 +7,7 @@ rm nvim-linux-x86_64.tar.gz
 
 sudo ln -s /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin
 
-sudo apt install nodejs npm ripgrep fzf fd-find imagemagick xsel xclip
+sudo apt install nodejs npm ripgrep fzf fd-find imagemagick xsel xclip luarocks
 
 sudo npm install -g tree-sitter-cli
 
