@@ -216,6 +216,7 @@ for_window [instance="pulseUI"] floating enable
 for_window [class="feh-kbmap"] floating enable
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 10px
+default_border pixel 1
 
 exec_always --no-startup-id /home/jngermon/.screenlayout/home.sh
 exec_always --no-startup-id /home/jngermon/.dotfiles/files/polybar/launch.sh
