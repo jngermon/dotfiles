@@ -13,7 +13,7 @@ logout)
     i3-msg exit
     ;;
 suspend)
-    lock && systemctl suspend
+    systemctl suspend && lock
     ;;
 hibernate)
     lock && systemctl hibernate
