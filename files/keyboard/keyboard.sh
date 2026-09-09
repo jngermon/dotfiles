@@ -14,8 +14,11 @@ function kbmap() {
         exit 0
     fi
 
-    echo "Show Layer" $1
-    feh --class feh-kbmap --borderless --scale-down ~/.dotfiles/files/keyboard/layer-$1.png &
+    CONF=$(cat ~/.dotfiles/files/keyboard/current)
+
+    echo "Show Layer" $CONF $1
+
+    feh --class feh-kbmap --borderless --scale-down ~/.dotfiles/files/keyboard/layers/$CONF/$1.png &
 }
 
 function i3swap() {
