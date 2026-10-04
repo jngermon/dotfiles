@@ -178,8 +178,6 @@ bindsym $mod+Delete mode "$mode_system"
 
 bindsym $mod+x exec --no-startup-id nautilus --no-desktop
 bindsym $mod+b exec google-chrome-stable
-#bindsym $mod+F2 exec xrandr --output eDP-1 --right-of HDMI-1
-#bindsym $mod+F3 exec xrandr --output eDP-1 --left-of HDMI-1
 
 # Manage audio
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5%+ unmute"
