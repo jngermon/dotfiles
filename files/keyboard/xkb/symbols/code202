@@ -10,14 +10,13 @@ xkb_symbols "moonlander" {
     key <LatA>	{ [         a,          A,       agrave,       Agrave ]	};
     key <LatB>	{ [         b,          B ]	};
     key <LatC>	{ [         c,          C,     ccedilla,     Ccedilla ]	};
-    key <LatD>	{ [         d,          D,   numbersign,   numbersign ]	};
+    key <LatD>	{ [         d,          D,   asciitilde ]	};
     key <LatE>	{ [         e,          E,       egrave,       Egrave ]	};
-    key <AE02>	{ [    eacute,     Eacute,  ecircumflex,  Ecircumflex ]	};
     key <LatF>	{ [         f,          F ]	};
     key <LatG>	{ [         g,          G ]	};
     key <LatH>	{ [         h,          H ]	};
-    key <LatI>	{ [         i,          I, dead_diaeresis ]	};
-    key <LatJ>	{ [         j,          J ]	};
+    key <LatI>	{ [         i,          I,   ediaeresis ]	};
+    key <LatJ>	{ [         j,          J,     EuroSign ]	};
     key <LatK>	{ [         k,          K,      section ]	};
     key <LatL>	{ [         l,          L,     sterling ]	};
     key <LatM>	{ [         m,          M,           mu ]	};
@@ -26,27 +25,43 @@ xkb_symbols "moonlander" {
     key <LatP>	{ [         p,          P,      percent ]	};
     key <LatQ>	{ [         q,          Q ]	};
     key <LatR>	{ [         r,          R ]	};
-    key <LatS>	{ [         s,          S,       dollar,     EuroSign ]	};
+    key <LatS>	{ [         s,          S,       dollar ]	};
     key <LatT>	{ [         t,          T ]	};
     key <LatU>	{ [         u,          U,       ugrave,       Ugrave ]	};
     key <LatV>	{ [         v,          V ]	};
     key <LatW>	{ [         w,          W ]	};
-    key <LatX>	{ [         x,          X,     asterisk ]	};
-    key <LatY>	{ [         y,          Y,        equal ]	};
+    key <LatX>	{ [         x,          X,  asciicircum, dead_circumflex  ]	};
+    key <LatY>	{ [         y,          Y,  dead_diaeresis ]	};
     key <LatZ>	{ [         z,          Z ]	};
     
-    key <BKSP>	{ [ BackSpace,  BackSpace,       Delete ]	};
-    key <AB08>	{ [     comma,     period,     question,       exclam ]	};
-    key <AB10>	{ [     slash,  backslash,          bar,    ampersand ]	};
-    key <AC10>	{ [     colon,  semicolon,   asciitilde ]	};
-    key <AC11>	{ [ apostrophe,  quotedbl,        grave ]	};
+    key <TLDE>	{ [twosuperior ]	};
+    key <AE01>	{ [  question,   question,       exclam,       exclam ]	};
+    key <AE02>	{ [    eacute,     Eacute,  ecircumflex,  Ecircumflex ]	};
+    key <AE03>	{ [numbersign ]	};
+    key <AE04>	{ [       bar ]	};
+    key <AE05>	{ [   notsign ]	};
+    key <AE06>	{ [   notsign ]	};
+    key <AE07>	{ [ ampersand ]	};
+    key <AE08>	{ [   notsign ]	};
+    key <AE09>	{ [   notsign ]	};
+    key <AE10>	{ [   notsign ]	};
+    key <AE11>	{ [     minus,      minus,   underscore,   underscore ]	};
+    key <AE12>	{ [   notsign ]	};
+
     key <AD11>	{ [ parenleft,       less,  bracketleft,    braceleft ] };
     key <AD12>	{ [ parenright,   greater, bracketright,   braceright ] };
-    key <AE11>  { [     minus,       plus,  asciicircum, dead_circumflex ]  };
 
-    key <SPCE>  { [     space,      space,   underscore ] };
+    key <AC11>	{ [ apostrophe,  quotedbl,        grave ]	};
+    key <BKSL>	{ [   notsign ]	};
 
-    key <TLDE>	{ [twosuperior, asciitilde,     notsign,      notsign ]	};
+    key <AB08>	{ [     comma,      comma,     semicolon,    semicolon ]	};
+    key <AB09>	{ [    period,     period,        colon,        colon ]	};
+    key <AB10>	{ [   notsign ]	};
+
+    key <BKSP>	{ [ BackSpace,  BackSpace,       Delete ]	};
+    key <KPDV>	{ [     slash,      slash,    backslash ]	};
+
+    key <SPCE>  { [     space,      space ] };
 
     include "level3(ralt_switch)"
 };

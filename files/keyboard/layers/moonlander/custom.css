@@ -1,0 +1,16 @@
+    .key .content .labels .key-tag.top {
+        top: 3px;
+        right: 5px;
+    }
+
+    .label.mbig {
+        font-size: 32px !important;
+    }
+    
+    .label.sbig {
+        font-size: 40px !important;
+    }
+
+    .label.sbig .glyph>span {
+        font-size: 3em !important;
+    }
